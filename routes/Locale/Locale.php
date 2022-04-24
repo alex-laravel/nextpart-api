@@ -7,4 +7,6 @@ use Illuminate\Support\Facades\Route;
  * Locale Controllers
  */
 
-Route::get('/locale/{locale}', [LocaleController::class, 'swap'])->name('swap');
+Route::name('locale.')->group(function () {
+    Route::get('/locale/{locale}', [LocaleController::class, 'swap'])->name('swap');
+});

@@ -7,4 +7,6 @@ use Illuminate\Support\Facades\Route;
  * Backend Controllers
  */
 
-Route::get('/', [DashboardController::class, 'index'])->name('index');
+Route::prefix('admin')->name('backend.')->middleware('verified')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('index');
+});

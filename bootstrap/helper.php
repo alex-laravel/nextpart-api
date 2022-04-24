@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Str;
+
 if (!function_exists('routeHome')) {
 
     /**
@@ -7,7 +9,32 @@ if (!function_exists('routeHome')) {
      */
     function routeHome()
     {
-        return '/';
+        return \App\Providers\RouteServiceProvider::HOME;
+    }
+}
+
+if (!function_exists('generateRememberToken')) {
+
+    /**
+     * @return string
+     * @throws Exception
+     */
+    function generateRememberToken()
+    {
+//        return bin2hex(random_bytes(32));
+        return Str::random(60);
+    }
+}
+
+if (!function_exists('generateVerificationHash')) {
+
+    /**
+     * @param string $userEmail
+     * @return string
+     */
+    function generateVerificationHash($userEmail)
+    {
+        return sha1($userEmail);
     }
 }
 
