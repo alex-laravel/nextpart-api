@@ -75,8 +75,9 @@ class ResetPasswordController extends Controller
      */
     protected function sendResetResponse(ResetPasswordRequest $request, $response)
     {
-        return redirect($this->redirectPath())
-            ->with('status', trans($response));
+        toast(trans($response),'success');
+
+        return redirect($this->redirectPath());
     }
 
     /**

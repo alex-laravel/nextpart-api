@@ -12,12 +12,6 @@
                 </div>
 
                 <div class="card-body">
-                    @if (session('resent'))
-                        <div class="alert alert-success" role="alert">
-                            {{ trans('alerts.auth.verify.sent') }}
-                        </div>
-                    @endif
-
                     {{ trans('strings.auth.verify.check_email_for_verification_link') }}
                     {{ trans('strings.auth.verify.not_receive_email') }}
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">

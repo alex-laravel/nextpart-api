@@ -62,10 +62,29 @@ class VerificationController extends Controller
 
     /**
      * @param Request $request
+     * @return RedirectResponse
+     */
+    public function resend(Request $request)
+    {
+        if ($request->user()->hasVerifiedEmail()) {
+            return redirect($this->redirectPath());
+        }
+
+        $request->user()->sendEmailVerificationNotification();
+
+        toast(trans('alerts.auth.verify.sent'), 'success');
+
+        return redirect()->back();
+    }
+
+    /**
+     * @param Request $request
      * @return mixed
      */
     protected function verified(Request $request)
     {
-        return redirect($this->redirectPath())->with('verified', true);
+        toast(trans('alerts.auth.verify.success'), 'success');
+
+        return redirect($this->redirectPath());
     }
 }

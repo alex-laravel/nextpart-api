@@ -70,6 +70,8 @@
         </nav>
 
         <main class="py-4">
+            @include('sweetalert::alert')
+            @include('backend.include.flash')
             @yield('content')
         </main>
     </div>
