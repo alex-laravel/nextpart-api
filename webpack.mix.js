@@ -11,8 +11,11 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
+mix.sass('resources/scss/app.scss', 'public/css')
+    .js('resources/js/app.js', 'public/js')
+    // .copy('resources/assets', 'public/assets')
+    .copy('resources/assets/avatars', 'public/assets/avatars')
+    .copy('resources/assets/icons', 'public/assets/icons')
     .sourceMaps();
 
 if (mix.inProduction()) {

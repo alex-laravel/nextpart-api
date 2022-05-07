@@ -1,3 +1,4 @@
 try {
-    require('bootstrap');
+    window.coreui = require('@coreui/coreui');
+    require('simplebar');
 } catch (e) {}

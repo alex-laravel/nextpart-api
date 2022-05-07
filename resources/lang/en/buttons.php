@@ -9,7 +9,7 @@ return [
     */
 
     'auth' => [
-        'register' => 'Register',
+        'register' => 'Create Account',
         'login' => 'Login',
         'logout' => 'Logout',
         'password_reset' => 'Reset Password',

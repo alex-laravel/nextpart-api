@@ -1,0 +1,14 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// CoreUI
+@import "variables";
+
+$enable-ltr: true; /* stylelint-disable-line scss/dollar-variable-default */
+$enable-rtl: false; /* stylelint-disable-line scss/dollar-variable-default */
+
+@import '~@coreui/coreui/scss/coreui';
+@import "~simplebar";
+
+@import "layout";
+@import "custom";

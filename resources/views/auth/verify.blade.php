@@ -3,22 +3,23 @@
 @section('title', trans('labels.auth.verify.title'))
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">
-                    {{ trans('labels.auth.verify.title') }}
-                </div>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card mb-4 mx-4 rounded-0">
+            <div class="card-body p-4">
+                <form method="POST" action="{{ route('verification.resend') }}">
+                    @csrf
+                    <h1>{{ trans('labels.auth.verify.title') }}</h1>
 
-                <div class="card-body">
-                    {{ trans('strings.auth.verify.check_email_for_verification_link') }}
-                    {{ trans('strings.auth.verify.not_receive_email') }}
-                    <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
-                        @csrf
+                    <p class="text-medium-emphasis">
+                        {{ trans('strings.auth.verify.check_email_for_verification_link') }}
+                    </p>
+
+                    <p class="text-medium-emphasis">
+                        {{ trans('strings.auth.verify.not_receive_email') }}
                         <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ trans('strings.auth.verify.another_verification_email') }}</button>.
-                    </form>
-                </div>
+                    </p>
+                </form>
             </div>
         </div>
     </div>

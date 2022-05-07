@@ -12,7 +12,7 @@ class DashboardPageTest extends TestCase
 
     const ROUTE_AUTH_LOGIN = '/auth/login';
     const ROUTE_AUTH_EMAIL_VERIFY = '/auth/email/verify';
-    const ROUTE_BACKEND_ADMIN = '/admin';
+    const ROUTE_BACKEND_ADMIN = '/admin/dashboard';
 
     /**
      * @return void

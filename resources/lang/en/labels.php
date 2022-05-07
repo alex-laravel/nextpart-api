@@ -16,7 +16,8 @@ return [
                 'email' => 'E-Mail Address',
                 'password' => 'Password',
                 'password_confirm' => 'Confirm Password',
-            ]
+            ],
+            'create_account' => 'Create your account',
         ],
         'login' => [
             'title' => 'Login',
@@ -24,6 +25,7 @@ return [
                 'login' => 'Login',
                 'password' => 'Password',
             ],
+            'sign_in' => 'Sign In to your account',
             'remember_me' => 'Remember Me',
             'forgot_password' => 'Forgot Your Password?'
         ],
@@ -31,7 +33,7 @@ return [
             'title' => 'Logout',
         ],
         'password_email' => [
-            'title' => 'Reset Password',
+            'title' => 'Forgot Password',
             'form' => [
                 'email' => 'E-Mail Address',
             ]
